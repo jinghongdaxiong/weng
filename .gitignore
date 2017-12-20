@@ -1,0 +1,11 @@
+/conf/db.ini
+/conf/conf.php
+/tmp/cache/*
+/tmp/logs/*
+/.idea/*
+.idea/
+.idea/workspace.xml
+/webroot/jpush.log
+
+/conf/homeimg.php
+.idea
