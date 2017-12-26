@@ -57,40 +57,40 @@
 5. 不用外键,请由程序保证约束
 
 ##四,SQL类军规
-1 SQL语句尽可能简单
+1. SQL语句尽可能简单
 * 一条SQL只能在一个CPU运算
 * 大语句拆小语句,减少锁时间
 * 一条大SQL可以堵死整个库
 
-2 简单的事务
+2. 简单的事务
 * 事务时间尽可能短
 * bad case
 * 上传图片事务
 
-3 避免使用触发器,用户自定义函数,请由程序取而代之
+3. 避免使用触发器,用户自定义函数,请由程序取而代之
 
-4 不用select *
+4. 不用select *
 * 消耗CPU,io,内存,带宽
 * 这种程序不具有扩展性
 
-5 OR改写为IN()
+5. OR改写为IN()
 
-6 OR改写为UNION
+6. OR改写为UNION
 
-7 limit高效分页
+7. limit高效分页
 * limit越大,效率越低
 * select id from t limit 10000, 10;
 * 应改为 select id form t where id > 10000 limit 10;
 
-8 使用union all替代union,union有去重开销
+8. 使用union all替代union,union有去重开销
 
-9 尽量不用连接join
+9. 尽量不用连接join
 
-10 务必请使用"同类型"进行比较,否则可能全表扫描
+10. 务必请使用"同类型"进行比较,否则可能全表扫描
 
-11 打散批量更新
+11. 打散批量更新
 
-12 使用性能分析工具
+12. 使用性能分析工具
 * show profile;
 * mysqlsla;
 * mysqldumpslow;
